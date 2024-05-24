@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Send Email to customers using django</h3>
+    <hr>
+    <form method="POST" action="{% url 'index' %}">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Title of email" required>
+        <br>
+        <br>
+        <input type="email", name="email" placeholder="The company's email address" required>
+        <br>
+        <br>
+        <textarea name="message" placeholder="Message to be delivered" required></textarea>
+        <br>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

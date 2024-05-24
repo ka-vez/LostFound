@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="shadow p-4 mb-5 bg-body mx-auto rounded " style="width: 700px; margin-top: 120px">
+    <h1>Login</h1>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="username" class="form-control" name="username" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            
+          
+   
+
+    <input type="submit" class = 'btn btn-secondary' value = 'Submit' >
+    <br>
+
+
+    </form>
+  </div>
+
+   
+
+
+{% endblock %}
